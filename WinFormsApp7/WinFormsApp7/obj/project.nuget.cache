@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "L8qhv1s9fD5Cl/og4xjKRm8K8VLvIJP+inCXVLhrfwrN/lxwELpEk/V3zW5dUSQS9h3ggeWuffGE5ZQ317FXkw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\slfdstrctd\\RiderProjects\\WinFormsApp7\\WinFormsApp7\\WinFormsApp7.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\slfdstrctd\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\slfdstrctd\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\slfdstrctd\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.8\\microsoft.aspnetcore.app.ref.3.1.8.nupkg.sha512",
+    "C:\\Users\\slfdstrctd\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.9\\microsoft.netcore.app.host.win-x64.3.1.9.nupkg.sha512"
+  ],
+  "logs": []
+}
