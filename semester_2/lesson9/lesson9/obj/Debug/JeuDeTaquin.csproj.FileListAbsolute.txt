@@ -1,6 +1,0 @@
-C:\Users\slfdstrctd\Desktop\The Timer and Time\JeuDeTaquin\bin\Debug\JeuDeTaquin.exe
-C:\Users\slfdstrctd\Desktop\The Timer and Time\JeuDeTaquin\bin\Debug\JeuDeTaquin.pdb
-C:\Users\slfdstrctd\Desktop\The Timer and Time\JeuDeTaquin\obj\Debug\JeuDeTaquin.csproj.CoreCompileInputs.cache
-C:\Users\slfdstrctd\Desktop\The Timer and Time\JeuDeTaquin\obj\Debug\JeuDeTaquin.exe
-C:\Users\slfdstrctd\Desktop\The Timer and Time\JeuDeTaquin\obj\Debug\JeuDeTaquin.pdb
-C:\Users\slfdstrctd\Desktop\The Timer and Time\JeuDeTaquin\obj\Debug\JeuDeTaquin.csprojAssemblyReference.cache

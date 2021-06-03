@@ -1,6 +1,0 @@
-C:\Users\slfdstrctd\source\repos\Project2\Project2\Debug\Project2.vcxprojAssemblyReference.cache
-C:\Users\slfdstrctd\source\repos\Project2\Project2\Debug\Project2.MyForm.resources
-C:\Users\slfdstrctd\source\repos\Project2\Project2\Debug\Project2.vcxproj.GenerateResource.cache
-C:\Users\slfdstrctd\Desktop\lesson1\Project2\Debug\Project2.vcxprojAssemblyReference.cache
-C:\Users\slfdstrctd\Desktop\lesson1\Project2\Debug\Project2.MyForm.resources
-C:\Users\slfdstrctd\Desktop\lesson1\Project2\Debug\Project2.vcxproj.GenerateResource.cache

@@ -1,5 +1,5 @@
-*.idea
-*/bin
-*/obj
-*/Debug
-*/Release
+**.idea
+**/bin
+**/obj
+**/Debug
+**/Release
