@@ -1,0 +1,15 @@
+C:\Users\slfdstrctd\RiderProjects\Diag\Diag\bin\Debug\netcoreapp3.1-windows\Diag.exe
+C:\Users\slfdstrctd\RiderProjects\Diag\Diag\bin\Debug\netcoreapp3.1-windows\Diag.deps.json
+C:\Users\slfdstrctd\RiderProjects\Diag\Diag\bin\Debug\netcoreapp3.1-windows\Diag.runtimeconfig.json
+C:\Users\slfdstrctd\RiderProjects\Diag\Diag\bin\Debug\netcoreapp3.1-windows\Diag.runtimeconfig.dev.json
+C:\Users\slfdstrctd\RiderProjects\Diag\Diag\bin\Debug\netcoreapp3.1-windows\Diag.dll
+C:\Users\slfdstrctd\RiderProjects\Diag\Diag\bin\Debug\netcoreapp3.1-windows\Diag.pdb
+C:\Users\slfdstrctd\RiderProjects\Diag\Diag\obj\Debug\netcoreapp3.1-windows\Diag.csprojAssemblyReference.cache
+C:\Users\slfdstrctd\RiderProjects\Diag\Diag\obj\Debug\netcoreapp3.1-windows\Diag.AssemblyInfoInputs.cache
+C:\Users\slfdstrctd\RiderProjects\Diag\Diag\obj\Debug\netcoreapp3.1-windows\Diag.AssemblyInfo.cs
+C:\Users\slfdstrctd\RiderProjects\Diag\Diag\obj\Debug\netcoreapp3.1-windows\Diag.csproj.CoreCompileInputs.cache
+C:\Users\slfdstrctd\RiderProjects\Diag\Diag\obj\Debug\netcoreapp3.1-windows\Diag.dll
+C:\Users\slfdstrctd\RiderProjects\Diag\Diag\obj\Debug\netcoreapp3.1-windows\Diag.pdb
+C:\Users\slfdstrctd\RiderProjects\Diag\Diag\obj\Debug\netcoreapp3.1-windows\Diag.genruntimeconfig.cache
+C:\Users\slfdstrctd\RiderProjects\Diag\Diag\obj\Debug\netcoreapp3.1-windows\Diag.Form1.resources
+C:\Users\slfdstrctd\RiderProjects\Diag\Diag\obj\Debug\netcoreapp3.1-windows\Diag.csproj.GenerateResource.cache

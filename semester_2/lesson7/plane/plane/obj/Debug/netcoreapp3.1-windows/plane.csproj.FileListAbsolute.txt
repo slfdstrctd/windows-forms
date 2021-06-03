@@ -1,0 +1,15 @@
+C:\Users\slfdstrctd\RiderProjects\plane\plane\bin\Debug\netcoreapp3.1-windows\plane.exe
+C:\Users\slfdstrctd\RiderProjects\plane\plane\bin\Debug\netcoreapp3.1-windows\plane.deps.json
+C:\Users\slfdstrctd\RiderProjects\plane\plane\bin\Debug\netcoreapp3.1-windows\plane.runtimeconfig.json
+C:\Users\slfdstrctd\RiderProjects\plane\plane\bin\Debug\netcoreapp3.1-windows\plane.runtimeconfig.dev.json
+C:\Users\slfdstrctd\RiderProjects\plane\plane\bin\Debug\netcoreapp3.1-windows\plane.dll
+C:\Users\slfdstrctd\RiderProjects\plane\plane\bin\Debug\netcoreapp3.1-windows\plane.pdb
+C:\Users\slfdstrctd\RiderProjects\plane\plane\obj\Debug\netcoreapp3.1-windows\plane.csprojAssemblyReference.cache
+C:\Users\slfdstrctd\RiderProjects\plane\plane\obj\Debug\netcoreapp3.1-windows\plane.AssemblyInfoInputs.cache
+C:\Users\slfdstrctd\RiderProjects\plane\plane\obj\Debug\netcoreapp3.1-windows\plane.AssemblyInfo.cs
+C:\Users\slfdstrctd\RiderProjects\plane\plane\obj\Debug\netcoreapp3.1-windows\plane.csproj.CoreCompileInputs.cache
+C:\Users\slfdstrctd\RiderProjects\plane\plane\obj\Debug\netcoreapp3.1-windows\plane.dll
+C:\Users\slfdstrctd\RiderProjects\plane\plane\obj\Debug\netcoreapp3.1-windows\plane.pdb
+C:\Users\slfdstrctd\RiderProjects\plane\plane\obj\Debug\netcoreapp3.1-windows\plane.genruntimeconfig.cache
+C:\Users\slfdstrctd\RiderProjects\plane\plane\obj\Debug\netcoreapp3.1-windows\plane.Form1.resources
+C:\Users\slfdstrctd\RiderProjects\plane\plane\obj\Debug\netcoreapp3.1-windows\plane.csproj.GenerateResource.cache

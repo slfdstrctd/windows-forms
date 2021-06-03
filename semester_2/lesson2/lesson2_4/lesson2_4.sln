@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 11
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lesson2_4", "lesson2_4\lesson2_4.csproj", "{13AEA576-D39B-425F-BA7F-043DDB0CBFEB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{13AEA576-D39B-425F-BA7F-043DDB0CBFEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13AEA576-D39B-425F-BA7F-043DDB0CBFEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13AEA576-D39B-425F-BA7F-043DDB0CBFEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13AEA576-D39B-425F-BA7F-043DDB0CBFEB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

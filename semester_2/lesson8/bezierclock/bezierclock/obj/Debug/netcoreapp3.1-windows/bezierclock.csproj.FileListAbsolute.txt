@@ -1,0 +1,13 @@
+C:\Users\slfdstrctd\RiderProjects\bezierclock\bezierclock\bin\Debug\netcoreapp3.1-windows\bezierclock.exe
+C:\Users\slfdstrctd\RiderProjects\bezierclock\bezierclock\bin\Debug\netcoreapp3.1-windows\bezierclock.deps.json
+C:\Users\slfdstrctd\RiderProjects\bezierclock\bezierclock\bin\Debug\netcoreapp3.1-windows\bezierclock.runtimeconfig.json
+C:\Users\slfdstrctd\RiderProjects\bezierclock\bezierclock\bin\Debug\netcoreapp3.1-windows\bezierclock.runtimeconfig.dev.json
+C:\Users\slfdstrctd\RiderProjects\bezierclock\bezierclock\bin\Debug\netcoreapp3.1-windows\bezierclock.dll
+C:\Users\slfdstrctd\RiderProjects\bezierclock\bezierclock\bin\Debug\netcoreapp3.1-windows\bezierclock.pdb
+C:\Users\slfdstrctd\RiderProjects\bezierclock\bezierclock\obj\Debug\netcoreapp3.1-windows\bezierclock.csprojAssemblyReference.cache
+C:\Users\slfdstrctd\RiderProjects\bezierclock\bezierclock\obj\Debug\netcoreapp3.1-windows\bezierclock.AssemblyInfoInputs.cache
+C:\Users\slfdstrctd\RiderProjects\bezierclock\bezierclock\obj\Debug\netcoreapp3.1-windows\bezierclock.AssemblyInfo.cs
+C:\Users\slfdstrctd\RiderProjects\bezierclock\bezierclock\obj\Debug\netcoreapp3.1-windows\bezierclock.csproj.CoreCompileInputs.cache
+C:\Users\slfdstrctd\RiderProjects\bezierclock\bezierclock\obj\Debug\netcoreapp3.1-windows\bezierclock.dll
+C:\Users\slfdstrctd\RiderProjects\bezierclock\bezierclock\obj\Debug\netcoreapp3.1-windows\bezierclock.pdb
+C:\Users\slfdstrctd\RiderProjects\bezierclock\bezierclock\obj\Debug\netcoreapp3.1-windows\bezierclock.genruntimeconfig.cache

@@ -1,0 +1,15 @@
+C:\Users\slfdstrctd\RiderProjects\txtedit1\txtedit1\bin\Debug\netcoreapp3.1-windows\txtedit1.exe
+C:\Users\slfdstrctd\RiderProjects\txtedit1\txtedit1\bin\Debug\netcoreapp3.1-windows\txtedit1.deps.json
+C:\Users\slfdstrctd\RiderProjects\txtedit1\txtedit1\bin\Debug\netcoreapp3.1-windows\txtedit1.runtimeconfig.json
+C:\Users\slfdstrctd\RiderProjects\txtedit1\txtedit1\bin\Debug\netcoreapp3.1-windows\txtedit1.runtimeconfig.dev.json
+C:\Users\slfdstrctd\RiderProjects\txtedit1\txtedit1\bin\Debug\netcoreapp3.1-windows\txtedit1.dll
+C:\Users\slfdstrctd\RiderProjects\txtedit1\txtedit1\bin\Debug\netcoreapp3.1-windows\txtedit1.pdb
+C:\Users\slfdstrctd\RiderProjects\txtedit1\txtedit1\obj\Debug\netcoreapp3.1-windows\txtedit1.csprojAssemblyReference.cache
+C:\Users\slfdstrctd\RiderProjects\txtedit1\txtedit1\obj\Debug\netcoreapp3.1-windows\txtedit1.Form1.resources
+C:\Users\slfdstrctd\RiderProjects\txtedit1\txtedit1\obj\Debug\netcoreapp3.1-windows\txtedit1.csproj.GenerateResource.cache
+C:\Users\slfdstrctd\RiderProjects\txtedit1\txtedit1\obj\Debug\netcoreapp3.1-windows\txtedit1.AssemblyInfoInputs.cache
+C:\Users\slfdstrctd\RiderProjects\txtedit1\txtedit1\obj\Debug\netcoreapp3.1-windows\txtedit1.AssemblyInfo.cs
+C:\Users\slfdstrctd\RiderProjects\txtedit1\txtedit1\obj\Debug\netcoreapp3.1-windows\txtedit1.csproj.CoreCompileInputs.cache
+C:\Users\slfdstrctd\RiderProjects\txtedit1\txtedit1\obj\Debug\netcoreapp3.1-windows\txtedit1.dll
+C:\Users\slfdstrctd\RiderProjects\txtedit1\txtedit1\obj\Debug\netcoreapp3.1-windows\txtedit1.pdb
+C:\Users\slfdstrctd\RiderProjects\txtedit1\txtedit1\obj\Debug\netcoreapp3.1-windows\txtedit1.genruntimeconfig.cache

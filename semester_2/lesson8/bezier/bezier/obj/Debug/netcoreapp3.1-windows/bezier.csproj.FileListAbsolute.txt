@@ -1,0 +1,13 @@
+C:\Users\slfdstrctd\RiderProjects\bezier\bezier\bin\Debug\netcoreapp3.1-windows\bezier.exe
+C:\Users\slfdstrctd\RiderProjects\bezier\bezier\bin\Debug\netcoreapp3.1-windows\bezier.deps.json
+C:\Users\slfdstrctd\RiderProjects\bezier\bezier\bin\Debug\netcoreapp3.1-windows\bezier.runtimeconfig.json
+C:\Users\slfdstrctd\RiderProjects\bezier\bezier\bin\Debug\netcoreapp3.1-windows\bezier.runtimeconfig.dev.json
+C:\Users\slfdstrctd\RiderProjects\bezier\bezier\bin\Debug\netcoreapp3.1-windows\bezier.dll
+C:\Users\slfdstrctd\RiderProjects\bezier\bezier\bin\Debug\netcoreapp3.1-windows\bezier.pdb
+C:\Users\slfdstrctd\RiderProjects\bezier\bezier\obj\Debug\netcoreapp3.1-windows\bezier.csprojAssemblyReference.cache
+C:\Users\slfdstrctd\RiderProjects\bezier\bezier\obj\Debug\netcoreapp3.1-windows\bezier.AssemblyInfoInputs.cache
+C:\Users\slfdstrctd\RiderProjects\bezier\bezier\obj\Debug\netcoreapp3.1-windows\bezier.AssemblyInfo.cs
+C:\Users\slfdstrctd\RiderProjects\bezier\bezier\obj\Debug\netcoreapp3.1-windows\bezier.csproj.CoreCompileInputs.cache
+C:\Users\slfdstrctd\RiderProjects\bezier\bezier\obj\Debug\netcoreapp3.1-windows\bezier.dll
+C:\Users\slfdstrctd\RiderProjects\bezier\bezier\obj\Debug\netcoreapp3.1-windows\bezier.pdb
+C:\Users\slfdstrctd\RiderProjects\bezier\bezier\obj\Debug\netcoreapp3.1-windows\bezier.genruntimeconfig.cache

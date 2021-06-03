@@ -1,0 +1,15 @@
+C:\Users\slfdstrctd\RiderProjects\simplegame\simplegame\bin\Debug\netcoreapp3.1-windows\simplegame.exe
+C:\Users\slfdstrctd\RiderProjects\simplegame\simplegame\bin\Debug\netcoreapp3.1-windows\simplegame.deps.json
+C:\Users\slfdstrctd\RiderProjects\simplegame\simplegame\bin\Debug\netcoreapp3.1-windows\simplegame.runtimeconfig.json
+C:\Users\slfdstrctd\RiderProjects\simplegame\simplegame\bin\Debug\netcoreapp3.1-windows\simplegame.runtimeconfig.dev.json
+C:\Users\slfdstrctd\RiderProjects\simplegame\simplegame\bin\Debug\netcoreapp3.1-windows\simplegame.dll
+C:\Users\slfdstrctd\RiderProjects\simplegame\simplegame\bin\Debug\netcoreapp3.1-windows\simplegame.pdb
+C:\Users\slfdstrctd\RiderProjects\simplegame\simplegame\obj\Debug\netcoreapp3.1-windows\simplegame.csprojAssemblyReference.cache
+C:\Users\slfdstrctd\RiderProjects\simplegame\simplegame\obj\Debug\netcoreapp3.1-windows\simplegame.AssemblyInfoInputs.cache
+C:\Users\slfdstrctd\RiderProjects\simplegame\simplegame\obj\Debug\netcoreapp3.1-windows\simplegame.AssemblyInfo.cs
+C:\Users\slfdstrctd\RiderProjects\simplegame\simplegame\obj\Debug\netcoreapp3.1-windows\simplegame.csproj.CoreCompileInputs.cache
+C:\Users\slfdstrctd\RiderProjects\simplegame\simplegame\obj\Debug\netcoreapp3.1-windows\simplegame.dll
+C:\Users\slfdstrctd\RiderProjects\simplegame\simplegame\obj\Debug\netcoreapp3.1-windows\simplegame.pdb
+C:\Users\slfdstrctd\RiderProjects\simplegame\simplegame\obj\Debug\netcoreapp3.1-windows\simplegame.genruntimeconfig.cache
+C:\Users\slfdstrctd\RiderProjects\simplegame\simplegame\obj\Debug\netcoreapp3.1-windows\simplegame.Form1.resources
+C:\Users\slfdstrctd\RiderProjects\simplegame\simplegame\obj\Debug\netcoreapp3.1-windows\simplegame.csproj.GenerateResource.cache

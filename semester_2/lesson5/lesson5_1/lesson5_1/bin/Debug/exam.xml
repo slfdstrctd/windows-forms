@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test>
+  <head>Тест по памятникам Санкт-Петербурга</head> 
+  <description>Архитектура Петербурга</description>
+  <qw>  
+    <q src="alexcol.jpg" text="Это ..." >
+       <a right="yes">Александровская колонна</a>
+       <a right="yes">Зимний дворец</a>
+       <a right="no">Ростральные колонны</a>
+    </q>
+    <q src="avr.jpg" text="Это ..." >
+       <a right="yes">Аврора</a>
+       <a right="no">Лодка</a>
+       <a right="no">Субмарина</a>
+	</q>
+    <q src="chizh.jpg" text="Это ..." >
+       <a right="no">Памятник Зайчику</a>
+       <a right="yes">Памятник Чижику-пыжику</a>
+       <a right="no">Памятник Ломоносову</a>
+    </q>
+    <q src="ioann.jpg" text="Это ..." >
+       <a right="yes">Петропавловская крепость</a>
+       <a right="yes">Иоанновские ворота </a>
+       <a right="no">Дворец Путина</a>
+	</q>
+    <q src="medn.jpg" text="Это ..." >
+       <a right="yes">Медный всадник</a>
+       <a right="no">Памятник Суворову</a>
+       <a right="no">Памятник Кутузову</a>
+	</q>
+    <q src="monum.jpg" text="Это ..." >
+       <a right="yes">Монумент героическим защитникам Ленинграда</a>
+       <a right="no">Родина-мать</a>
+       <a right="no">Памятник Чапаеву</a>
+   </q>
+    <q src="ring.jpg" text="Это ..." >
+       <a right="yes">Зеленый пояс Славы, Разорванное кольцо</a>
+       <a right="no">Памятник Менделееву</a>
+       <a right="no">Памятник Рериху</a>
+   </q>
+    <q src="rostr.jpg" text="Это ..." >
+       <a right="no">Александровская колонна</a>
+       <a right="no">Зимний дворец</a>
+       <a right="yes">Ростральные колонны</a>
+   </q>
+    <q src="sphin.jpg" text="Это ..." >
+       <a right="yes">Пристань со сфинксами</a>
+       <a right="no">Нос майора Ковалева</a>
+       <a right="no">Памятник Растрелли</a>
+   </q>
+    <q src="suvor.jpg" text="Это ..." >
+       <a right="yes">Суворов и Потёмкин</a>
+       <a right="no">Кутузов и Барклай-де-Толли</a>
+       <a right="no">Чубайс и Лукашенко</a>
+    </q>
+    <q src="z.jpg" text="Это ..." >
+       <a right="yes">Памятник Зайчику</a>
+       <a right="no">Памятник чижику-пыжику</a>
+       <a right="no">Памятник Растрелли</a>
+	</q>
+  </qw>  
+  <levels>
+      <level score="8" text="Отлично!"/>
+      <level score="6" text="Хорошо"/>
+      <level score="4" text="Удовлетворительно"/>
+      <level score="3" text="Плохо!"/>
+      <level score="2" text="Отвратительно!!!"/>
+      <level score="0" text="ВЫ - НЕУЧ!!!"/>
+  </levels>  
+</test>

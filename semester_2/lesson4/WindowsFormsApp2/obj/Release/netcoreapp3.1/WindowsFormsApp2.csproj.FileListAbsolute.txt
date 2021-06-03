@@ -1,0 +1,15 @@
+C:\Users\slfdstrctd\source\repos\WindowsFormsApp2\WindowsFormsApp2\bin\Release\netcoreapp3.1\WindowsFormsApp2.exe
+C:\Users\slfdstrctd\source\repos\WindowsFormsApp2\WindowsFormsApp2\bin\Release\netcoreapp3.1\WindowsFormsApp2.deps.json
+C:\Users\slfdstrctd\source\repos\WindowsFormsApp2\WindowsFormsApp2\bin\Release\netcoreapp3.1\WindowsFormsApp2.runtimeconfig.json
+C:\Users\slfdstrctd\source\repos\WindowsFormsApp2\WindowsFormsApp2\bin\Release\netcoreapp3.1\WindowsFormsApp2.runtimeconfig.dev.json
+C:\Users\slfdstrctd\source\repos\WindowsFormsApp2\WindowsFormsApp2\bin\Release\netcoreapp3.1\WindowsFormsApp2.dll
+C:\Users\slfdstrctd\source\repos\WindowsFormsApp2\WindowsFormsApp2\bin\Release\netcoreapp3.1\WindowsFormsApp2.pdb
+C:\Users\slfdstrctd\source\repos\WindowsFormsApp2\WindowsFormsApp2\obj\Release\netcoreapp3.1\WindowsFormsApp2.Form1.resources
+C:\Users\slfdstrctd\source\repos\WindowsFormsApp2\WindowsFormsApp2\obj\Release\netcoreapp3.1\WindowsFormsApp2.Properties.Resources.resources
+C:\Users\slfdstrctd\source\repos\WindowsFormsApp2\WindowsFormsApp2\obj\Release\netcoreapp3.1\WindowsFormsApp2.csproj.GenerateResource.cache
+C:\Users\slfdstrctd\source\repos\WindowsFormsApp2\WindowsFormsApp2\obj\Release\netcoreapp3.1\WindowsFormsApp2.AssemblyInfoInputs.cache
+C:\Users\slfdstrctd\source\repos\WindowsFormsApp2\WindowsFormsApp2\obj\Release\netcoreapp3.1\WindowsFormsApp2.AssemblyInfo.cs
+C:\Users\slfdstrctd\source\repos\WindowsFormsApp2\WindowsFormsApp2\obj\Release\netcoreapp3.1\WindowsFormsApp2.csproj.CoreCompileInputs.cache
+C:\Users\slfdstrctd\source\repos\WindowsFormsApp2\WindowsFormsApp2\obj\Release\netcoreapp3.1\WindowsFormsApp2.dll
+C:\Users\slfdstrctd\source\repos\WindowsFormsApp2\WindowsFormsApp2\obj\Release\netcoreapp3.1\WindowsFormsApp2.pdb
+C:\Users\slfdstrctd\source\repos\WindowsFormsApp2\WindowsFormsApp2\obj\Release\netcoreapp3.1\WindowsFormsApp2.genruntimeconfig.cache

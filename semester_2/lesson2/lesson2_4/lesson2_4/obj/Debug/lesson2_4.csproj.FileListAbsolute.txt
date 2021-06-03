@@ -1,0 +1,10 @@
+C:\Users\slfdstrctd\Desktop\lesson2_4\lesson2_4\bin\Debug\lesson2_4.exe.config
+C:\Users\slfdstrctd\Desktop\lesson2_4\lesson2_4\bin\Debug\lesson2_4.exe
+C:\Users\slfdstrctd\Desktop\lesson2_4\lesson2_4\bin\Debug\lesson2_4.pdb
+C:\Users\slfdstrctd\Desktop\lesson2_4\lesson2_4\obj\Debug\lesson2_4.csprojAssemblyReference.cache
+C:\Users\slfdstrctd\Desktop\lesson2_4\lesson2_4\obj\Debug\lesson2_4.Form1.resources
+C:\Users\slfdstrctd\Desktop\lesson2_4\lesson2_4\obj\Debug\lesson2_4.Properties.Resources.resources
+C:\Users\slfdstrctd\Desktop\lesson2_4\lesson2_4\obj\Debug\lesson2_4.csproj.GenerateResource.cache
+C:\Users\slfdstrctd\Desktop\lesson2_4\lesson2_4\obj\Debug\lesson2_4.csproj.CoreCompileInputs.cache
+C:\Users\slfdstrctd\Desktop\lesson2_4\lesson2_4\obj\Debug\lesson2_4.exe
+C:\Users\slfdstrctd\Desktop\lesson2_4\lesson2_4\obj\Debug\lesson2_4.pdb

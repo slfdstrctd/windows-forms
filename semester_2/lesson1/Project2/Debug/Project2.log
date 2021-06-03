@@ -1,0 +1,15 @@
+﻿  MyForm.cpp
+C:\Users\slfdstrctd\Desktop\lesson1\Project2\MyForm.h(246,17): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\slfdstrctd\Desktop\lesson1\Project2\MyForm.h(246,30): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\slfdstrctd\Desktop\lesson1\Project2\MyForm.h(246,44): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\slfdstrctd\Desktop\lesson1\Project2\MyForm.h(246,72): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\slfdstrctd\Desktop\lesson1\Project2\MyForm.h(251,26): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\slfdstrctd\Desktop\lesson1\Project2\MyForm.h(267,25): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\slfdstrctd\Desktop\lesson1\Project2\MyForm.cpp(9,33): warning C4829: Possibly incorrect parameters to function main. Consider 'int main(Platform::Array<Platform::String^>^ argv)'
+  .NETFramework,Version=v4.7.2.AssemblyAttributes.cpp
+  Generating Code...
+C:\Users\slfdstrctd\Desktop\lesson1\Project2\MyForm.h(205): warning C4700: uninitialized local variable 'x' used
+C:\Users\slfdstrctd\Desktop\lesson1\Project2\MyForm.h(221): warning C4700: uninitialized local variable 'left' used
+C:\Users\slfdstrctd\Desktop\lesson1\Project2\MyForm.h(231): warning C4700: uninitialized local variable 'right' used
+  MyForm.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+  Project2.vcxproj -> C:\Users\slfdstrctd\Desktop\lesson1\Debug\Project2.exe
