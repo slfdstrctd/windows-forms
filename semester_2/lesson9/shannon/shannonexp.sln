@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "shannonexp", "shannonexp\shannonexp.csproj", "{3966AFEE-0B8A-4629-94D1-8CF7D9815430}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3966AFEE-0B8A-4629-94D1-8CF7D9815430}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3966AFEE-0B8A-4629-94D1-8CF7D9815430}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3966AFEE-0B8A-4629-94D1-8CF7D9815430}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3966AFEE-0B8A-4629-94D1-8CF7D9815430}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

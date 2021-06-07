@@ -38,7 +38,7 @@ namespace lesson3
         {
             if (img == null)
             {
-                img = new Bitmap(PanelWidth, PanelHeight, g);
+                img = new Bitmap(PanelWidth, PanelHeight, g);    
                 gimg = Graphics.FromImage(img);
                 gimg.SmoothingMode = SmoothingMode.AntiAlias;
                 gimg.Clear(Color.White);
@@ -164,6 +164,11 @@ namespace lesson3
                 "Справка",
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Information);
+        }
+
+        private void Form1_SizeChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

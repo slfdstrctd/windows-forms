@@ -98,6 +98,7 @@ namespace txtedit2
             this.modified1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.position1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.hint1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
@@ -107,6 +108,7 @@ namespace txtedit2
             // 
             // menuStrip1
             // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {this.file1, this.edit1, this.format1, this.view1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -383,15 +385,17 @@ namespace txtedit2
             this.textBox1.ContextMenuStrip = this.contextMenuStrip1;
             this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBox1.EnableAutoDragDrop = true;
-            this.textBox1.Location = new System.Drawing.Point(0, 55);
+            this.textBox1.Location = new System.Drawing.Point(0, 59);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(800, 370);
+            this.textBox1.Size = new System.Drawing.Size(800, 359);
             this.textBox1.TabIndex = 1;
             this.textBox1.Text = "";
             this.textBox1.SelectionChanged += new System.EventHandler(this.textBox1_SelectionChanged);
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // contextMenuStrip1
             // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {this.cut2, this.copy2, this.paste2, this.font2});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(113, 100);
@@ -439,10 +443,11 @@ namespace txtedit2
             // 
             // toolStrip1
             // 
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {this.new10, this.open10, this.save10, this.cut10, this.copy10, this.paste10, this.toolStripSeparator6, this.bold10, this.italic10, this.underline10, this.toolStripSeparator7, this.leftJustify10, this.center10, this.rightJustify10});
             this.toolStrip1.Location = new System.Drawing.Point(0, 28);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(800, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(800, 31);
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -452,7 +457,7 @@ namespace txtedit2
             this.new10.Image = ((System.Drawing.Image) (resources.GetObject("new10.Image")));
             this.new10.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.new10.Name = "new10";
-            this.new10.Size = new System.Drawing.Size(23, 24);
+            this.new10.Size = new System.Drawing.Size(28, 28);
             this.new10.Text = "toolStripButton1";
             this.new10.ToolTipText = "New";
             this.new10.Click += new System.EventHandler(this.new1_Click);
@@ -463,7 +468,7 @@ namespace txtedit2
             this.open10.Image = ((System.Drawing.Image) (resources.GetObject("open10.Image")));
             this.open10.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.open10.Name = "open10";
-            this.open10.Size = new System.Drawing.Size(23, 24);
+            this.open10.Size = new System.Drawing.Size(28, 28);
             this.open10.Text = "toolStripButton1";
             this.open10.ToolTipText = "Open";
             this.open10.Click += new System.EventHandler(this.open1_Click);
@@ -474,7 +479,7 @@ namespace txtedit2
             this.save10.Image = ((System.Drawing.Image) (resources.GetObject("save10.Image")));
             this.save10.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.save10.Name = "save10";
-            this.save10.Size = new System.Drawing.Size(23, 24);
+            this.save10.Size = new System.Drawing.Size(28, 28);
             this.save10.Text = "toolStripButton1";
             this.save10.ToolTipText = "Save";
             this.save10.Click += new System.EventHandler(this.save1_Click);
@@ -485,7 +490,7 @@ namespace txtedit2
             this.cut10.Image = ((System.Drawing.Image) (resources.GetObject("cut10.Image")));
             this.cut10.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.cut10.Name = "cut10";
-            this.cut10.Size = new System.Drawing.Size(23, 24);
+            this.cut10.Size = new System.Drawing.Size(28, 28);
             this.cut10.Text = "toolStripButton3";
             this.cut10.ToolTipText = "Cut";
             this.cut10.Click += new System.EventHandler(this.cut1_Click);
@@ -496,7 +501,7 @@ namespace txtedit2
             this.copy10.Image = ((System.Drawing.Image) (resources.GetObject("copy10.Image")));
             this.copy10.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.copy10.Name = "copy10";
-            this.copy10.Size = new System.Drawing.Size(23, 24);
+            this.copy10.Size = new System.Drawing.Size(28, 28);
             this.copy10.Text = "toolStripButton2";
             this.copy10.ToolTipText = "Copy";
             this.copy10.Click += new System.EventHandler(this.copy1_Click);
@@ -507,7 +512,7 @@ namespace txtedit2
             this.paste10.Image = ((System.Drawing.Image) (resources.GetObject("paste10.Image")));
             this.paste10.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.paste10.Name = "paste10";
-            this.paste10.Size = new System.Drawing.Size(23, 24);
+            this.paste10.Size = new System.Drawing.Size(28, 28);
             this.paste10.Text = "toolStripButton1";
             this.paste10.ToolTipText = "Paste";
             this.paste10.Click += new System.EventHandler(this.paste1_Click);
@@ -515,7 +520,7 @@ namespace txtedit2
             // toolStripSeparator6
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 27);
+            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 31);
             // 
             // bold10
             // 
@@ -524,7 +529,7 @@ namespace txtedit2
             this.bold10.Image = ((System.Drawing.Image) (resources.GetObject("bold10.Image")));
             this.bold10.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.bold10.Name = "bold10";
-            this.bold10.Size = new System.Drawing.Size(23, 24);
+            this.bold10.Size = new System.Drawing.Size(23, 28);
             this.bold10.Text = "B";
             this.bold10.ToolTipText = "Bold";
             this.bold10.Click += new System.EventHandler(this.bold10_Click);
@@ -536,7 +541,7 @@ namespace txtedit2
             this.italic10.Image = ((System.Drawing.Image) (resources.GetObject("italic10.Image")));
             this.italic10.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.italic10.Name = "italic10";
-            this.italic10.Size = new System.Drawing.Size(23, 24);
+            this.italic10.Size = new System.Drawing.Size(23, 28);
             this.italic10.Text = "I";
             this.italic10.ToolTipText = "Italic";
             this.italic10.Click += new System.EventHandler(this.italic10_Click);
@@ -548,7 +553,7 @@ namespace txtedit2
             this.underline10.Image = ((System.Drawing.Image) (resources.GetObject("underline10.Image")));
             this.underline10.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.underline10.Name = "underline10";
-            this.underline10.Size = new System.Drawing.Size(23, 24);
+            this.underline10.Size = new System.Drawing.Size(23, 28);
             this.underline10.Text = "U";
             this.underline10.ToolTipText = "Underline";
             this.underline10.Click += new System.EventHandler(this.underline10_Click);
@@ -556,7 +561,7 @@ namespace txtedit2
             // toolStripSeparator7
             // 
             this.toolStripSeparator7.Name = "toolStripSeparator7";
-            this.toolStripSeparator7.Size = new System.Drawing.Size(6, 27);
+            this.toolStripSeparator7.Size = new System.Drawing.Size(6, 31);
             // 
             // leftJustify10
             // 
@@ -566,7 +571,7 @@ namespace txtedit2
             this.leftJustify10.Image = ((System.Drawing.Image) (resources.GetObject("leftJustify10.Image")));
             this.leftJustify10.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.leftJustify10.Name = "leftJustify10";
-            this.leftJustify10.Size = new System.Drawing.Size(23, 24);
+            this.leftJustify10.Size = new System.Drawing.Size(23, 28);
             this.leftJustify10.Text = "<";
             this.leftJustify10.ToolTipText = "Left justify";
             this.leftJustify10.Click += new System.EventHandler(this.leftJustify10_Click);
@@ -577,7 +582,7 @@ namespace txtedit2
             this.center10.Image = ((System.Drawing.Image) (resources.GetObject("center10.Image")));
             this.center10.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.center10.Name = "center10";
-            this.center10.Size = new System.Drawing.Size(23, 24);
+            this.center10.Size = new System.Drawing.Size(23, 28);
             this.center10.Text = "=";
             this.center10.ToolTipText = "Center";
             this.center10.Click += new System.EventHandler(this.center10_Click);
@@ -588,17 +593,18 @@ namespace txtedit2
             this.rightJustify10.Image = ((System.Drawing.Image) (resources.GetObject("rightJustify10.Image")));
             this.rightJustify10.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.rightJustify10.Name = "rightJustify10";
-            this.rightJustify10.Size = new System.Drawing.Size(23, 24);
+            this.rightJustify10.Size = new System.Drawing.Size(23, 28);
             this.rightJustify10.Text = ">";
             this.rightJustify10.ToolTipText = "Right justify";
             this.rightJustify10.Click += new System.EventHandler(this.rightJustify10_Click);
             // 
             // statusStrip1
             // 
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {this.cap1, this.num1, this.modified1, this.position1, this.hint1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 425);
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {this.cap1, this.num1, this.modified1, this.position1, this.hint1, this.toolStripStatusLabel1});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 418);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(800, 25);
+            this.statusStrip1.Size = new System.Drawing.Size(800, 32);
             this.statusStrip1.TabIndex = 3;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -608,7 +614,7 @@ namespace txtedit2
             this.cap1.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides) ((((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Top) | System.Windows.Forms.ToolStripStatusLabelBorderSides.Right) | System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
             this.cap1.BorderStyle = System.Windows.Forms.Border3DStyle.Sunken;
             this.cap1.Name = "cap1";
-            this.cap1.Size = new System.Drawing.Size(40, 20);
+            this.cap1.Size = new System.Drawing.Size(40, 27);
             this.cap1.Text = "CAP";
             // 
             // num1
@@ -617,7 +623,7 @@ namespace txtedit2
             this.num1.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides) ((((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Top) | System.Windows.Forms.ToolStripStatusLabelBorderSides.Right) | System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
             this.num1.BorderStyle = System.Windows.Forms.Border3DStyle.Sunken;
             this.num1.Name = "num1";
-            this.num1.Size = new System.Drawing.Size(40, 20);
+            this.num1.Size = new System.Drawing.Size(40, 27);
             this.num1.Text = "NUM";
             // 
             // modified1
@@ -626,7 +632,7 @@ namespace txtedit2
             this.modified1.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides) ((((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Top) | System.Windows.Forms.ToolStripStatusLabelBorderSides.Right) | System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
             this.modified1.BorderStyle = System.Windows.Forms.Border3DStyle.Sunken;
             this.modified1.Name = "modified1";
-            this.modified1.Size = new System.Drawing.Size(70, 20);
+            this.modified1.Size = new System.Drawing.Size(70, 27);
             this.modified1.Text = "Modified";
             // 
             // position1
@@ -635,15 +641,22 @@ namespace txtedit2
             this.position1.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides) ((((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Top) | System.Windows.Forms.ToolStripStatusLabelBorderSides.Right) | System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
             this.position1.BorderStyle = System.Windows.Forms.Border3DStyle.Sunken;
             this.position1.Name = "position1";
-            this.position1.Size = new System.Drawing.Size(60, 20);
+            this.position1.Size = new System.Drawing.Size(60, 27);
             this.position1.Text = "1 : 1";
             // 
             // hint1
             // 
             this.hint1.Margin = new System.Windows.Forms.Padding(5, 3, 0, 2);
             this.hint1.Name = "hint1";
-            this.hint1.Size = new System.Drawing.Size(50, 20);
+            this.hint1.Size = new System.Drawing.Size(50, 27);
             this.hint1.Text = "Ready";
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(10, 27);
+            this.toolStripStatusLabel1.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides) ((((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Top) | System.Windows.Forms.ToolStripStatusLabelBorderSides.Right) | System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
+            this.toolStripStatusLabel1.BorderStyle = System.Windows.Forms.Border3DStyle.Sunken;
             // 
             // timer1
             // 
@@ -689,7 +702,8 @@ namespace txtedit2
         private System.Windows.Forms.ToolStripStatusLabel hint1;
         private System.Windows.Forms.ToolStripStatusLabel modified1;
         private System.Windows.Forms.ToolStripStatusLabel num1;
-
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        
         private System.Windows.Forms.ToolStripStatusLabel cap1;
 
         private System.Windows.Forms.StatusStrip statusStrip1;
@@ -784,5 +798,7 @@ namespace txtedit2
         private System.Windows.Forms.RichTextBox textBox1;
 
         #endregion
+
+        
     }
 }

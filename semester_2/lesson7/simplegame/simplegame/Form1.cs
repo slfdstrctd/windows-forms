@@ -11,7 +11,9 @@ namespace simplegame
         private static int Rt;
         private static int X0;
         private static int Y0;
+
         private static int X;
+
         //protected static int Y;
         private static int Xm;
         private static int Ym;
@@ -19,7 +21,7 @@ namespace simplegame
         private static int Ycur;
         private static int Ypush;
         private static int Xpush;
-        private static int NumberRocket1 = 5;
+        private static int NumberRocket1 = 10;
         private static int NumberRocket2 = 10;
         private static int NumberPlane1;
         private static int NumberPlane2;
@@ -29,21 +31,27 @@ namespace simplegame
         private SolidBrush blackBrush;
         private Pen Blackpen;
         private Pen mainpen;
-        
+        private Graphics _graphics;
+
         private Random rand;
         private Pen Redpen;
+        private Image gun;
+        private Image plane;
 
         public Form1()
         {
             InitializeComponent();
+            gun = new Bitmap("cannon.png");
+            plane = new Bitmap("plane.bmp");
         }
-        
+
         private void GetPlane(Graphics gr, int x, int y)
         {
-            gr.DrawArc(mainpen, x, y - 2, 30, 5, -265, 340);
-            gr.DrawArc(mainpen, x + 1, y - 7, 4, 10, -220, 190);
-            gr.DrawArc(mainpen, x + 13, y - 10, 5, 20, -20, 190);
-            gr.DrawLine(Blackpen, x + 27, y - 5, x + 28, y + 7);
+            gr.DrawImage(plane, x, y);
+            // gr.DrawArc(mainpen, x, y - 2, 30, 5, -265, 340);
+            // gr.DrawArc(mainpen, x + 1, y - 7, 4, 10, -220, 190);
+            // gr.DrawArc(mainpen, x + 13, y - 10, 5, 20, -20, 190);
+            // gr.DrawLine(Blackpen, x + 27, y - 5, x + 28, y + 7);
         }
 
         private void MyPause(bool ifPause)
@@ -63,17 +71,17 @@ namespace simplegame
             }
 
             if (NumberRocket1 < -1 && NumberRocket2 != 0)
-                MessageBox.Show("Извините, генерал Шпилёв, запасы энергии для лазера исчерпаны.");
+                MessageBox.Show("Извините, генерал, запасы энергии для лазера исчерпаны.");
 
             if (NumberRocket2 == 0)
             {
-                MessageBox.Show("Генерал Шпилёв, управляемые ракеты закончились.");
+                MessageBox.Show("Генерал, управляемые ракеты закончились.");
                 NumberRocket2 += -1;
             }
 
             if (NumberRocket1 == 0 && flug1)
             {
-                MessageBox.Show("Генерал Шпилёв, мы исчерпали запасы энергии. Лазер отключен. ");
+                MessageBox.Show("Генерал, мы исчерпали запасы энергии. Лазер отключен. ");
                 NumberRocket1 += -1;
             }
 
@@ -81,7 +89,7 @@ namespace simplegame
 
             if (NumberRocket1 == 0)
             {
-                MessageBox.Show("Генерал Шпилёв, мы исчерпали запасы энергии. Лазер отключен. ");
+                MessageBox.Show("Генерал, мы исчерпали запасы энергии. Лазер отключен. ");
                 NumberRocket1 += -1;
             }
 
@@ -137,8 +145,9 @@ namespace simplegame
                     var y2 = e.Y - 8;
                     graphics2.DrawLine(redpen, x1, y1, x2, y2);
                     NumberRocket1 += -1;
-                    label3.Text = NumberRocket1.ToString();
-                    if (Math.Abs(e.X - Xt - 20) <= 15 && Math.Abs(e.Y - HightFly - 7) <= 5)
+                    // label3.Text = NumberRocket1.ToString();
+                    // pictureBox1.Cle;
+                    if (Math.Abs(e.X - Xt - 20) <= 50 && Math.Abs(e.Y - HightFly - 7) <= 50)
                     {
                         X = Xt;
                         flug1 = false;
@@ -172,6 +181,29 @@ namespace simplegame
             var graphics1 = e.Graphics;
             var white = Color.White;
             graphics1.Clear(white);
+
+            TextRenderer.DrawText(graphics1, "Лазер", this.Font, new Point(12, 396), Color.Black);
+            TextRenderer.DrawText(graphics1, "Ракет", this.Font, new Point(12, 426), Color.Black);
+
+
+            TextRenderer.DrawText(graphics1, "Уничтожено", this.Font, new Point(575, 396), Color.Black);
+
+            TextRenderer.DrawText(graphics1, "Пропущено", this.Font, new Point(575, 426), Color.Black);
+            // 575; 336
+
+            // label8.Text = NumberPlane1.ToString();
+            // label8.Text = NumberPlane1.ToString();
+
+            TextRenderer.DrawText(graphics1, NumberRocket1 > 0 ? NumberRocket1.ToString() : "0", this.Font,
+                new Point(70, 396), Color.Black);
+            TextRenderer.DrawText(graphics1, NumberRocket2 > 0 ? NumberRocket2.ToString() : "0", this.Font,
+                new Point(70, 426), Color.Black);
+
+            TextRenderer.DrawText(graphics1, NumberPlane1.ToString(), this.Font, new Point(695, 396), Color.Black);
+
+            TextRenderer.DrawText(graphics1, NumberPlane2.ToString(), this.Font, new Point(695, 426), Color.Black);
+
+
             if (flug1)
             {
                 GetPlane(graphics1, Xt, HightFly);
@@ -217,13 +249,18 @@ namespace simplegame
                 num2 = Y0 - Rt * (Y0 - Ym) / num3 - 9;
             }
 
-            if (Math.Abs(num1 - Xt - 10) <= 20 && Math.Abs(num2 - HightFly + 6) <= 5)
+            if (Math.Abs(num1 - Xt - 10) <= 50 && Math.Abs(num2 - HightFly + 6) <= 50)
             {
                 X = Xt;
                 flug1 = false;
             }
 
-            graphics1.FillEllipse(blackBrush, X0 - 10, Y0 - 10, 20, 20);
+            //graphics1.FillEllipse(blackBrush, X0 - 10, Y0 - 10, 20, 20);
+
+            // graphics1.RotateTransform(-10.0F);
+            //graphics1.DrawImage(gun, X0 - 15, Y0 - 15, 25, 25);
+            //graphics1.ResetTransform();
+
             var num4 = (int) Math.Sqrt((Y0 - Ycur) * (Y0 - Ycur) +
                                        (Xcur - X0) * (Xcur - X0));
             this.mainpen.Width = 5f;
@@ -234,7 +271,28 @@ namespace simplegame
             var x2 = X0 + (Xcur - X0) * 15 / num4;
             var y0_2 = Y0;
             var y2 = y0_2 - (y0_2 - Ycur) * 15 / num4;
-            graphics2.DrawLine(mainpen, x0, y0_1, x2, y2);
+
+            var xdiff = x2 - x0;
+            var ydiff = y2 - y0_1;
+
+            float moveX = 25 / 2f + X0 - 15;
+            float moveY = 25 / 2f + Y0 - 15;
+
+            _graphics = graphics1;
+
+            graphics1.TranslateTransform(moveX, moveY);
+
+            graphics1.RotateTransform(25.0F);
+            var angle = (float) (Math.Atan2(ydiff, xdiff) * 180.0 / Math.PI);
+            // if (Math.Abs(angle) < 180)
+            graphics1.RotateTransform(angle);
+            graphics1.TranslateTransform(-moveX, -moveY);
+
+            graphics1.DrawImage(gun, X0 - 15, Y0 - 15, 25, 25);
+            // graphics2.DrawLine(mainpen, x0, y0_1, x2, y2);
+            // label4.BringToFront();
+            // pictureBox1.Refresh();
+
             this.mainpen.Width = 3f;
         }
 
@@ -255,14 +313,14 @@ namespace simplegame
             timer1.Stop();
             timer2.Stop();
             pictureBox1.Visible = false;
-            label2.Visible = false;
-            label3.Visible = false;
-            label4.Visible = false;
-            label5.Visible = false;
-            label6.Visible = false;
-            label7.Visible = false;
-            label8.Visible = false;
-            label9.Visible = false;
+            // label2.Visible = false;
+            // label3.Visible = false;
+            // label4.Visible = false;
+            // label5.Visible = false;
+            // label6.Visible = false;
+            // label7.Visible = false;
+            // label8.Visible = false;
+            // label9.Visible = false;
             label1.Text = "5";
             label1.Visible = true;
             NumberRocket1 = 10;
@@ -289,7 +347,7 @@ namespace simplegame
                 {
                     Xt = -24;
                     ++NumberPlane2;
-                    label9.Text = NumberPlane2.ToString();
+                    // label9.Text = NumberPlane2.ToString();
                     HightFly = (int) Math.Round(rand.NextDouble() * (Y0 * 4.0 / 5.0) + 20.0);
                 }
 
@@ -307,7 +365,7 @@ namespace simplegame
                     pictureBox1.Invalidate();
                     Xt = -24;
                     ++NumberPlane1;
-                    label8.Text = NumberPlane1.ToString();
+                    // label8.Text = NumberPlane1.ToString();
                     HightFly = (int) Math.Round(rand.NextDouble() * (Y0 * 4.0 / 5.0) + 20.0);
                     flug1 = true;
                 }
@@ -332,7 +390,7 @@ namespace simplegame
                     {
                         NumberRocket2 += -1;
                         flug3 = false;
-                        label5.Text = NumberRocket2.ToString();
+                        // label5.Text = NumberRocket2.ToString();
                     }
                 }
             }
@@ -345,7 +403,7 @@ namespace simplegame
                 {
                     NumberRocket2 += -1;
                     flug3 = false;
-                    label5.Text = NumberRocket2.ToString();
+                    // label5.Text = NumberRocket2.ToString();
                 }
             }
 
@@ -362,14 +420,14 @@ namespace simplegame
             X0 = pictureBox1.Width / 2;
             Y0 = pictureBox1.Height;
             HightFly = pictureBox1.Height / 2;
-            label2.Visible = false;
-            label3.Visible = false;
-            label4.Visible = false;
-            label5.Visible = false;
-            label6.Visible = false;
-            label7.Visible = false;
-            label8.Visible = false;
-            label9.Visible = false;
+            // label2.Visible = false;
+            //label3.Visible = false;
+            // label4.Visible = false;
+            // label5.Visible = false;
+            // label6.Visible = false;
+            // label7.Visible = false;
+            // label8.Visible = false;
+            // label9.Visible = false;
             pictureBox1.Visible = false;
         }
 
@@ -391,20 +449,20 @@ namespace simplegame
                 Xt = -24;
                 pictureBox1.Invalidate();
                 label1.Visible = false;
-                label2.Visible = true;
-                label3.Visible = true;
-                label4.Visible = true;
-                label5.Visible = true;
-                label6.Visible = true;
-                label7.Visible = true;
-                label8.Visible = true;
-                label9.Visible = true;
+                // label2.Visible = true;
+                // label3.Visible = true;
+                // label4.Visible = true;
+                // label5.Visible = true;
+                // label6.Visible = true;
+                // label7.Visible = true;
+                // label8.Visible = true;
+                // label9.Visible = true;
                 timer1.Interval = 20;
                 timer2.Interval = 1;
-                label3.Text = NumberRocket1.ToString();
-                label5.Text = NumberRocket2.ToString();
-                label8.Text = NumberPlane1.ToString();
-                label9.Text = NumberPlane2.ToString();
+                // label3.Text = NumberRocket1.ToString();
+                // label5.Text = NumberRocket2.ToString();
+                // label8.Text = NumberPlane1.ToString();
+                // label9.Text = NumberPlane2.ToString();
                 timer1.Start();
                 timer1.Enabled = true;
             }

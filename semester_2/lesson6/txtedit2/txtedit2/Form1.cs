@@ -9,7 +9,7 @@ namespace txtedit2
     public partial class Form1 : Form
     {
         private ToolStripMenuItem alignItem;
-        private Form2 form2 = new Form2();
+        private readonly Form2 form2 = new Form2();
 
         public Form1()
         {
@@ -290,11 +290,12 @@ namespace txtedit2
 
         private void textBox1_SelectionChanged(object sender, EventArgs e)
         {
+            
             int x = textBox1.SelectionStart,
                 y = textBox1.GetLineFromCharIndex(x),
                 x0 = textBox1.GetFirstCharIndexFromLine(y);
             position1.Text = $"{y + 1} : {x - x0 + 1}";
-
+            toolStripStatusLabel1.Text = textBox1.SelectionLength.ToString();
             Font f = textBox1.SelectionFont;
 
             SetEnabled(f != null);
@@ -321,6 +322,8 @@ namespace txtedit2
             mi.CheckState = CheckState.Indeterminate;
             GetButton(mi).Checked = true;
             alignItem = mi;
+            
+            
         }
 
         private void paragraph1_Click(object sender, EventArgs e)
@@ -344,6 +347,11 @@ namespace txtedit2
         {
             string s = Path.GetExtension(path).ToUpper();
             return s == ".RTF" ? RichTextBoxStreamType.RichText : RichTextBoxStreamType.PlainText;
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = textBox1.TextLength.ToString();
         }
     }
 }

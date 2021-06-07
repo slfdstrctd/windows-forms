@@ -16,7 +16,7 @@ namespace bezierclock
             {
                 new Point(0, -650), //start 
                 new Point(0, -300),
-                new Point(200, -300),
+                new Point(-100, -300),
                 new Point(50, 0), //end - start
                 new Point(50, 0),
                 new Point(50, 0),
@@ -27,7 +27,7 @@ namespace bezierclock
                 new Point(-50, 0),
                 new Point(-50, 0),
                 new Point(-50, 0), //end - start
-                new Point(-200, -300),
+                new Point(100, -300),
                 new Point(0, -300),
                 new Point(0, -650), //end
             });
@@ -44,7 +44,7 @@ namespace bezierclock
             {
                 new Point(00, -750), //start 
                 new Point(0, -300),
-                new Point(20, -300),
+                new Point(-50, -300),
                 new Point(50, 0), //end - start
                 new Point(50, 0),
                 new Point(50, 0),
@@ -55,7 +55,7 @@ namespace bezierclock
                 new Point(-50, 0),
                 new Point(-50, 0),
                 new Point(-50, 0), //end - start
-                new Point(-20, -300),
+                new Point(50, -300),
                 new Point(0, -300),
                 new Point(0, -750), //end
             });

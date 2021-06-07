@@ -93,10 +93,10 @@ namespace bezierclock
             for (int i = 0; i < 60; i++)
             {
                 int iSize = i % 5 == 0 ? 100 : 30;
-                grfx.FillRectangle(brush, 0 - iSize / 2, -900 - iSize / 2,
-                    iSize, iSize);
-                //grfx.FillEllipse(brush, 0 - iSize / 2, -900 - iSize / 2,
-                //   iSize, iSize);
+                //grfx.FillRectangle(brush, 0 - iSize / 2, -900 - iSize / 2,
+                //    iSize, iSize);
+                grfx.FillEllipse(brush, 0 - iSize / 2, -900 - iSize / 2,
+                iSize, iSize);
                 grfx.RotateTransform(6);
             }
         }

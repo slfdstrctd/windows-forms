@@ -16,8 +16,8 @@ namespace bezierclock
             clkctl.Parent = this;
             clkctl.Time = DateTime.Now;
             clkctl.Dock = DockStyle.Fill;
-            clkctl.BackColor = Color.Coral;
-            clkctl.ForeColor = Color.Bisque;
+            clkctl.BackColor = Color.MediumAquamarine;
+            clkctl.ForeColor = Color.Beige;
 
             Timer timer = new Timer();
             timer.Interval = 100;
