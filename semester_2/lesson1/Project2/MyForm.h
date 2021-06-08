@@ -3,6 +3,7 @@
 #include "gsl/gsl_sf_bessel.h"
 #include <msclr\marshal_cppstd.h>
 #include <string>
+#include <cmath>
 
 namespace Project2 {
 
@@ -12,19 +13,21 @@ namespace Project2 {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
+	using namespace System::Drawing::Drawing2D;
 
 	/// <summary>
 	/// Summary for MyForm
 	/// </summary>
 	public ref class MyForm : public System::Windows::Forms::Form
 	{
+
+		Int32 left, right;
+		int type = 0;  // 0 - value, 1 - left, 2 - right
+
 	public:
 		MyForm(void)
 		{
 			InitializeComponent();
-			//
-			//TODO: Add the constructor code here
-			//
 		}
 
 	protected:
@@ -76,7 +79,7 @@ namespace Project2 {
 			// 
 			// button1
 			// 
-			this->button1->Location = System::Drawing::Point(12, 270);
+			this->button1->Location = System::Drawing::Point(12, 287);
 			this->button1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(88, 35);
@@ -87,7 +90,7 @@ namespace Project2 {
 			// 
 			// button2
 			// 
-			this->button2->Location = System::Drawing::Point(113, 270);
+			this->button2->Location = System::Drawing::Point(113, 287);
 			this->button2->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(155, 35);
@@ -98,7 +101,7 @@ namespace Project2 {
 			// 
 			// button3
 			// 
-			this->button3->Location = System::Drawing::Point(283, 269);
+			this->button3->Location = System::Drawing::Point(283, 286);
 			this->button3->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(156, 36);
@@ -109,7 +112,7 @@ namespace Project2 {
 			// 
 			// button4
 			// 
-			this->button4->Location = System::Drawing::Point(576, 270);
+			this->button4->Location = System::Drawing::Point(576, 285);
 			this->button4->Name = L"button4";
 			this->button4->Size = System::Drawing::Size(144, 36);
 			this->button4->TabIndex = 3;
@@ -160,10 +163,10 @@ namespace Project2 {
 			this->pictureBox1->Location = System::Drawing::Point(69, 12);
 			this->pictureBox1->Name = L"pictureBox1";
 			this->pictureBox1->Size = System::Drawing::Size(607, 252);
-			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::CenterImage;
 			this->pictureBox1->TabIndex = 8;
 			this->pictureBox1->TabStop = false;
 			this->pictureBox1->Visible = false;
+			this->pictureBox1->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &MyForm::pictureBox1_Paint);
 			// 
 			// MyForm
 			// 
@@ -180,6 +183,7 @@ namespace Project2 {
 			this->Controls->Add(this->button3);
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->button1);
+			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::Fixed3D;
 			this->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->MinimumSize = System::Drawing::Size(750, 380);
 			this->Name = L"MyForm";
@@ -193,14 +197,15 @@ namespace Project2 {
 		}
 #pragma endregion 
 	private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e) {
+		type = 0;
 	}
 
-		   int type = 0;  // 0 - value, 1 - left, 2 - right
 
-		   //accept
+
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-		double left, right;
-		if (!type) {
+
+		if (type == 0)
+		{
 			double x;
 			if (x.TryParse(textBox1->Text, x)) {
 				label1->Hide();
@@ -211,77 +216,66 @@ namespace Project2 {
 				label3->Text = "Dawson(x)=" + y;
 				label2->Show();
 				label3->Show();
+				button1->Enabled = false;
 			}
 			else {
 				MessageBox::Show("Неверный формат числа.\nДля вызова справки нажмите F1", "Ошибка", MessageBoxButtons::OK, MessageBoxIcon::Error);
 			}
 		}
-		else if (type == 1){
+		else if (type == 1)
+		{
 			type = 2;
-			if (left.TryParse(textBox1->Text, left)) {
+
+			if (left.TryParse(textBox1->Text, left))
+			{
 				label1->Text = "Введите правую границу интервала: ";
 				textBox1->Text = "";
 			}
-			else {
+			else
+			{
 				MessageBox::Show("Неверный формат числа.\nДля вызова справки нажмите F1", "Ошибка", MessageBoxButtons::OK, MessageBoxIcon::Error);
 			}
 		}
 		else if (type == 2) {
-			pictureBox1->Show();
-			if (right.TryParse(textBox1->Text, right)) { //&& right >= left
+			if (right.TryParse(textBox1->Text, right)) {
+				button1->Enabled = false;
+				pictureBox1->Show();
 				label1->Hide();
 				textBox1->Text = "";
 				textBox1->Hide();
 
-				// add plot
-					pictureBox1->Refresh();
-			
-					Color^ col = gcnew Color();
-					Pen^ myPen = gcnew Pen(col->Blue);
+				//this->Paint += gcnew PaintEventHandler(Form1_Paint);
 
-					Graphics ^g = pictureBox1->CreateGraphics();
-					g->Clear(col->White);
+				//pictureBox1->Refresh();
+				//pictureBox1->Invalidate();
+				//pictureBox1->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &MyForm::pictureBox1_Paint);
+				pictureBox1->Invalidate();
+				//pictureBox1->Refresh();
 
-					int nmbInterv = 100;
-					float xmin = left, xmax = right, ymin = gsl_sf_dawson(xmin), ymax = gsl_sf_dawson(xmax);
-					//float xmin = left, xmax = right, ymin = gsl_sf_bessel_J0(xmin), ymax = gsl_sf_bessel_J0(xmax);
 
-					float xstep = (xmax - xmin) / nmbInterv;
-					float kx = pictureBox1->Width / xmax, ky = pictureBox1->Height / ymax;
-					float x1 = xmin, y1 = gsl_sf_dawson(x1), x2, y2;
-					//float x1 = xmin, y1 = gsl_sf_bessel_J0(x1), x2, y2;
-					
-					x2 = x1;
-					
-					/*for (int i = 0; i < nmbInterv; i++)
-					{
-						x2 = x1 + xstep;
-						y2 = gsl_sf_dawson(x2);
-						g->DrawLine(myPen, kx * x1, pictureBox1->Height - ky * y1, kx* x2, pictureBox1->Height - ky * y2);
-						x1 = x2;
-						y1 = y2;
-					}*/
-					
-					while (x2 <xmax ) {
-						x2 = x1 + xstep;
-						y2 = gsl_sf_dawson(x2);
-						//if (y2 < 0) y2 *= -1;
-						g->DrawLine(myPen, 100*x1, 100*y1+50, 100*x2, 100*y2+50);
-						x1 = x2; //pictureBox1->Height/2
-						y1 = y2;
-					}
-					//pictureBox1->Show();
-						
-				// input right and show plot
+
+
+
+
+
+
+
+
+
+				//}
+
+
+
 			}
-			else {	
+			else {
 				MessageBox::Show("Неверный формат числа или правая граница меньше левой.\nДля вызова справки нажмите F1", "Ошибка", MessageBoxButtons::OK, MessageBoxIcon::Error);
 			}
 		}
 	}
 
-	// new
+		   // new
 	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+		button1->Enabled = true;
 		type = 0;
 		textBox1->Text = "";
 		label1->Text = "Введите x:";
@@ -293,8 +287,9 @@ namespace Project2 {
 		textBox1->Show();
 		pictureBox1->Hide();
 	}
-	//plot
+		   //plot
 	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
+		button1->Enabled = true;
 		type = 1;
 		label1->Text = "Введите левую границу интервала:";
 		label1->Show();
@@ -303,7 +298,7 @@ namespace Project2 {
 		label3->Hide();
 		pictureBox1->Hide();
 	}
-	// exit 
+		   // exit 
 	private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
 		Application::Exit();
 	}
@@ -311,5 +306,140 @@ namespace Project2 {
 	private: System::Void MyForm_HelpRequested(System::Object^ sender, System::Windows::Forms::HelpEventArgs^ hlpevent) {
 		MessageBox::Show("Числа вводятся в формате десятичных дробей. \nЦелая часть от дробной - отделяется запятой. \nНапример: x=-17,3", "Справка по программе", MessageBoxButtons::OK, MessageBoxIcon::Asterisk);
 	}
-};
+	private: System::Void pictureBox1_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+		//pictureBox1->Refresh();
+	
+		//Color^ col = gcnew Color();
+		
+		Pen^ myPen = gcnew Pen(Color::Blue);
+		Brush^ b = gcnew SolidBrush(Color::Black);
+
+		double width = 2.0;
+
+		Graphics^ g = e->Graphics;
+		
+		g->SmoothingMode = System::Drawing::Drawing2D::SmoothingMode::AntiAlias;
+		//g->Clear(Color::White);
+
+
+		int nmbInterv = 100;
+		double xmin = left, xmax = right, ymin = gsl_sf_dawson(xmin), ymax = gsl_sf_dawson(xmax);
+
+		double xstep = (xmax - xmin) / nmbInterv;
+		double kx = pictureBox1->Width / xmax, ky = pictureBox1->Height / ymax;
+
+
+		// Graph
+
+		float x1 = 0.0f;
+		double num2 = (double)(pictureBox1->Height / 2);
+		float y1 = (float)((double)gsl_sf_dawson(left) * 100.0 + num2);
+		float x2 = 0.0f;
+		float y2 = 0.0f;
+
+		float y_min = INT_MAX;
+		float y_max = INT_MIN;
+
+		if (0.0 >= (double)pictureBox1->Width)
+			return;
+		while ((double)y2 < (double)pictureBox1->Height)
+		{
+			++x2;
+			y2 = (float)(pictureBox1->Height / 2) + gsl_sf_dawson((double)x2 / (double)pictureBox1->Width * (right - left) + left) * 100;
+			g->DrawLine(myPen, x1, y1, x2, y2);
+			x1 = x2;
+
+			y1 = y2;
+
+			if (y1 < y_min) y_min = y1;
+			if (y1 > y_max) y_max = y1;
+
+			if ((double)x2 >= (double)pictureBox1->Width)
+				break;
+		}
+
+
+
+		Pen^ axisPen = gcnew Pen(Color::CornflowerBlue, 2.0);
+
+		// x axis
+		g->DrawLine(axisPen, Point(0, pictureBox1->Height - 5), Point(pictureBox1->Width, pictureBox1->Height - 5));
+
+		// y axis
+		g->DrawLine(axisPen, Point(0, 0), Point(0, pictureBox1->Height - 5));
+
+
+		double xrange = abs(xmax - xmin);
+
+		double yrange = abs(y_max - y_min);
+
+		double step;
+		int xi = xmin;
+		int posx, posy;
+
+		double ll = pictureBox1->Width / min(xrange, 5);
+
+		for (step = 0; step <= pictureBox1->Width; step += ll)
+		{
+
+			StringFormatFlags^ sf = gcnew StringFormatFlags();
+			//StringFormat^ drawFormat = gcnew StringFormat();
+			/*if (step == 0) {
+				posx = 5;
+			}
+			else if (step >= pictureBox1->Width) posx = pictureBox1->Width - 15;
+			else */
+			posx = step + 5;
+
+			g->DrawLine(axisPen, Point(step, pictureBox1->Height - 5), Point(step, pictureBox1->Height - 15));
+
+			g->DrawString(xi.ToString(), this->Font, b,
+				posx, pictureBox1->Height - 20);
+			if (xrange < 5) {
+				xi++;
+			}
+			else {
+				xi += xrange / 5;
+			}
+
+		}
+
+
+		// y labels
+		//MessageBox::Show(y_max + " " + y_min);
+
+		ll = pictureBox1->Height / 5;
+		double yi = y_min;
+
+		for (step = 0; step <= pictureBox1->Height; step += ll)
+		{
+
+			StringFormatFlags^ sf = gcnew StringFormatFlags();
+
+			//StringFormat^ drawFormat = gcnew StringFormat();
+			if (step == 0) {
+				posx = 5;
+			}
+			else if (step >= pictureBox1->Height) posx = pictureBox1->Height - 15;
+			else posx = step + 5;
+
+
+
+			g->DrawLine(axisPen, Point(0, step), Point(10, step));
+
+			g->DrawString((std::trunc(yi * 10000) / 10000).ToString(), this->Font, b,
+				15, pictureBox1->Height - posx);
+			/*if (yrange < 5) {
+				xi++;
+			}*/
+			//else {
+			yi += yrange / 5;
+			//}
+
+		}
+		
+
+	}
+	};
+
 }

@@ -481,7 +481,7 @@ namespace WindowsFormsApplication2
 
         private void panel1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            MessageBox.Show("Генерал Шпилёв, вы подорвались на мине!");
+            
             int row = (int) (e.Y / H) + 1,
                 col = (int) (e.X / W) + 1;
 

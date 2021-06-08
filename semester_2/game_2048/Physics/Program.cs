@@ -1,15 +1,18 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace lesson3
+namespace Physics
 {
-    internal static class Program
+    static class Program
     {
         /// <summary>
-        ///     Главная точка входа для приложения.
+        /// Главная точка входа для приложения.
         /// </summary>
         [STAThread]
-        private static void Main()
+        static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

@@ -19,7 +19,8 @@ namespace shannonexp
         private int curr;
         private static int n;
         private readonly string text = File.ReadAllText(path + "\\text.txt", Encoding.Default);
-        private int[] tries = new int[n];
+        private int[] tries = new int[33];
+        private int amount;
 
         public Form1()
         {
@@ -54,32 +55,40 @@ namespace shannonexp
 
         private void tile_Click(object? sender, EventArgs eventArgs)
         {
-            var s = sender as CharButton;
-            if (s != null && a != null)
+            if (sender is CharButton s && a != null)
             {
-                tries[curr]++;
                 // MessageBox.Show(tries[0].ToString());
-
+                amount++;
                 if (s.Text != a[curr].ToString())
                 {
                     label3.Text = "Не угадали!";
                     s.Enabled = false;
                 }
+                // ЕСЛИ нажатая буква совпала с текущей
                 else
                 {
+                    //MessageBox.Show(amount.ToString());
+                    ++tries[amount];
+                    amount = 0;
                     enableTiles(true);
                     double res = 0;
                     if (curr != n - 1) curr++;
                     else
+                    // ЕСЛИ ОТГАДАЛИ
                     {
-                        // SHOW SHANNON
                         int sum = tries.Sum();
                         double p;
+                        
                         foreach (var t in tries)
                         {
-                            p = t / (double) sum;
-                            res += -p * Math.Log2(p);
+                            if (t != 0)
+                            {
+                                p = t / (double) sum;
+                                res += -p * Math.Log2(p);
+                            }
                         }
+
+                        //amount = 0;
 
                         label4.Text = res.ToString(CultureInfo.InvariantCulture);
                         enableTiles(false);
@@ -112,9 +121,10 @@ namespace shannonexp
         private void button1_Click(object sender, EventArgs e)
         {
             n = (int) numericUpDown1.Value;
-            tries = new int[n];
+            tries = new int[33];
             curr = 0;
             label4.Text = "";
+            amount = 0;
 
             if (n >= 2 && n < 17)
             {

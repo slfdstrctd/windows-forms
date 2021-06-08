@@ -12,9 +12,9 @@ void main(array<String^>^ args) {
 	Project2::MyForm form;
 	Application::Run(% form);
 
-	double x = 5.0;
-	double expected = -0.17759677131433830434739701;
-	double y = gsl_sf_bessel_J0(x);
+	//double x = 5.0;
+	//double expected = -0.17759677131433830434739701;
+	//double y = gsl_sf_dawson(x);
 	//std::cout << "J0(5.0) = %.18f" << y;
 	//std::cout << "exact   = %.18f\n" << expected;
 }
